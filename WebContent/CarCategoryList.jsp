@@ -22,6 +22,17 @@
 	%>
 	
 	<table width="1000">
+	<tr height="60">
+		<td align="center" colspan="3">
+		<%	
+			String temp="";
+			if(category==1) {temp="소형 자동차";}
+			else if (category==2) {temp="중형 자동차";}
+			else {temp="대형 자동차";}
+		%>
+		<b><%=temp%></b>
+		</td>
+	</tr>
 	<%
 		//tr을 3개씩 보여주고 다시 tr을 실행할 수 있도록 변수 선언.
 		int j=0;
