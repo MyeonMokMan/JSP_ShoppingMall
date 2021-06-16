@@ -23,7 +23,9 @@
 	<table width="1000">
 		<tr height="70">
 			<td colspan="4">
+				<a href="RentcarMain.jsp">
 				<img alt="·Î°í" src="images/RENT.png" height="65">
+				</a>
 			</td>
 			<td align="center" width="200">
 				<%=id%>´Ô ¹Ý°©½À´Ï´Ù.
