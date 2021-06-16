@@ -31,7 +31,7 @@
 		</tr>
 		<tr height="50">
 			<td align="center" width="200" bgcolor="red">
-				<a href="#" class="top-links">예약하기</a>
+				<a href="CarReserveMain.jsp" class="top-links">예약하기</a>
 			</td>
 			<td align="center" width="200" bgcolor="red">
 				<a href="#" class="top-links">예약확인</a>
