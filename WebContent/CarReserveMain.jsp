@@ -23,6 +23,9 @@
 	%>
 	
 	<table width="1000">
+		<tr height="60">
+			<td align="center" colspan="3"><b>최신 자동차</b></td>
+		</tr>
 		<tr height="240">
 		
 	<% 
@@ -49,9 +52,8 @@
 			<option value="3">대형</option>
 		</select>&nbsp;&nbsp;
 		<input type="submit" value="검색">&nbsp;&nbsp;
+		<input type="button" value="전체 검색" onclick="location.href='RentcarMain.jsp?center=CarAllList.jsp'">
 	</form>
-	<button onclick="location.href=CarAllList.jsp">전체 검색</button>
-	
 </body>
 </center>
 </html>
