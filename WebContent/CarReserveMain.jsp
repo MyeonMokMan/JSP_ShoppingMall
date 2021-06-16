@@ -41,7 +41,7 @@
 	</table>
 	<hr color="red" size="2">
 	<p><b>차량 검색하기<br><br><br>
-	<form action="CarCategoryList.jsp" method="post">
+	<form action="RentcarMain.jsp?center=CarCategoryList.jsp" method="post">
 		<b>차량 종류보기</b>&nbsp;&nbsp;
 		<select name="category">
 			<option value="1">소형</option>
@@ -49,8 +49,8 @@
 			<option value="3">대형</option>
 		</select>&nbsp;&nbsp;
 		<input type="submit" value="검색">&nbsp;&nbsp;
-		<button onclick="location.href=CarAllList.jsp">전체 검색</button>
 	</form>
+	<button onclick="location.href=CarAllList.jsp">전체 검색</button>
 	
 </body>
 </center>
