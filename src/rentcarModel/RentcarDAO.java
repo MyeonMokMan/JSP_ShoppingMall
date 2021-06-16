@@ -80,4 +80,47 @@ public class RentcarDAO {
 		
 		return vec;
 	}
+	
+	public Vector<CarListBean> getCategoryCar(int category) {
+		
+		Vector<CarListBean> vec = new Vector<CarListBean>();
+		
+		try {
+			
+			getCon();
+			
+			String sql = "select * from rentcar where category=?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, category);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				CarListBean bean = new CarListBean();
+				
+				bean.setNo(rs.getInt(1));
+				bean.setName(rs.getString(2));
+				bean.setCategory(rs.getInt(3));
+				bean.setPrice(rs.getInt(4));
+				bean.setUsepeople(rs.getInt(5));
+				bean.setCompany(rs.getString(6));
+				bean.setImg(rs.getString(7));
+				bean.setInfo(rs.getString(8));
+				
+				vec.add(bean);
+				
+			}
+			
+			con.close();
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+		return vec;
+		
+	}
 }
