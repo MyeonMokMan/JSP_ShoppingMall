@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>쇼핑몰 예제</title>
 </head>
 <body>
-
+	<table width="1000">
+		<tr height="500">
+			<td align="center">
+			<img alt="메인 화면" src="images/Main.jpg" width="1000" height="470">
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
