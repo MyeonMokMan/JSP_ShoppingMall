@@ -28,7 +28,14 @@
 				</a>
 			</td>
 			<td align="center" width="200">
-				<%=id%>´Ô ¹Ý°©½À´Ï´Ù.
+				<%=id%>
+			<%
+				if(id.equals("Guest")) {
+			%>
+				<button onclick="RentcarMain.jsp?center=MemberLogin.jsp">·Î±×ÀÎ</button>
+			<%	
+				}
+			%>
 			</td>
 		</tr>
 		<tr height="50">
