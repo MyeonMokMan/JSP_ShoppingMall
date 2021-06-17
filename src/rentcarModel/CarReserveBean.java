@@ -2,7 +2,9 @@ package rentcarModel;
 
 public class CarReserveBean {
 	
+	private int reserveNo;
 	private int no;
+	private String id;
 	private int qty;
 	//대여 기간
 	private int dDay;
