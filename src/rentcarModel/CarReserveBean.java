@@ -63,5 +63,17 @@ public class CarReserveBean {
 	public void setUseSeat(int useSeat) {
 		this.useSeat = useSeat;
 	}
+	public int getReserveNo() {
+		return reserveNo;
+	}
+	public void setReserveNo(int reserveNo) {
+		this.reserveNo = reserveNo;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 }
