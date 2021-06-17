@@ -24,7 +24,7 @@
 	%>
 	
 	<center>
-	<form action="RentcarMain.jsp?center=CarOptionSelect.jsp">
+	<form action="RentcarMain.jsp?center=CarOptionSelect.jsp" method="post">
 	<table width="1000">
 		<tr height="100">
 			<td align="center" colspan="3"><b><%=bean.getName()%></b></td>
@@ -59,7 +59,8 @@
 		<tr>
 			<td align="center" colspan="2">
 				<input type="hidden" name="no" value="<%=bean.getNo()%>">
-				<input type="submit" value="옵션 선택 후 예약">
+				<input type="hidden" name="img" value="<%=bean.getImg()%>">
+				<input type="submit" value="예약하기">
 			</td>
 		</tr>
 	</table>
