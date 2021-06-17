@@ -237,4 +237,34 @@ public class RentcarDAO {
 		
 		return result;
 	}
+	
+	public void setReserveCar(CarReserveBean rBean) {
+		
+		try {
+			
+			getCon();
+			
+			String sql = "insert into carreserve values(reserve_seq.NEXTVAL,?,?,?,?,?,?,?,?,?)";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, rBean.getNo());
+			pstmt.setString(2, rBean.getId());
+			pstmt.setInt(3, rBean.getQty());
+			pstmt.setInt(4, rBean.getdDay());
+			pstmt.setString(5, rBean.getrDay());
+			pstmt.setInt(6, rBean.getUseIn());
+			pstmt.setInt(7, rBean.getUseWifi());
+			pstmt.setInt(8, rBean.getUseNavi());
+			pstmt.setInt(9, rBean.getUseSeat());
+			
+			pstmt.executeUpdate();
+			
+			con.close();
+					
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+	}
 }
