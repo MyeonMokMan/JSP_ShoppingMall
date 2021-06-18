@@ -313,4 +313,26 @@ public class RentcarDAO {
 			
 			return vec;
 	}
+		
+		public void carRemoveReserve(String id, String rDay) {
+			
+			try {
+				
+				getCon();
+				
+				String sql = "delete from carreserve where id=? and rDay=?";
+				
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, id);
+				pstmt.setString(2, rDay);
+				pstmt.executeUpdate();
+				
+				con.close();
+						
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+				
+			}
+		}
 }
