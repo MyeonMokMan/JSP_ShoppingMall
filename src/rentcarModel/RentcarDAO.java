@@ -267,4 +267,50 @@ public class RentcarDAO {
 			
 		}
 	}
+		
+		public Vector<CarViewBean> getAllReserve(String id) {
+			
+			Vector<CarViewBean> vec = new Vector<CarViewBean>();
+			
+			try {
+				
+				getCon();
+				
+				String sql = "select * from rentcar natural join carreserve "
+						+ "where sysdate < to_date(rday,'YYYY-MM-DD') and id=?";
+				
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, id);
+				
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					
+					CarViewBean cBean = new CarViewBean();
+					
+					//쿼리문 수행한 결과의 순서를 봐야함
+					cBean.setName(rs.getString(2));
+					cBean.setPrice(rs.getInt(4));
+					cBean.setImg(rs.getString(7));
+					cBean.setQty(rs.getInt(11));
+					cBean.setdDay(rs.getInt(12));
+					cBean.setrDay(rs.getString(13));
+					cBean.setUseIn(rs.getInt(14));
+					cBean.setUseWifi(rs.getInt(15));
+					cBean.setUseNavi(rs.getInt(16));
+					cBean.setUseSeat(rs.getInt(17));
+					
+					vec.add(cBean);
+				}
+				
+				con.close();
+				
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+				
+			}
+			
+			return vec;
+	}
 }
