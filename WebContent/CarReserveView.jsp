@@ -88,7 +88,7 @@
 				<td width="60" align="center"><%=useWifi%></td>
 				<td width="60" align="center"><%=useNavi%></td>
 				<td width="60" align="center"><%=useSeat%></td>
-				<td width="90" align="center"><button onclick="location.href='CarReserveDel.jsp'">삭제</button></td>
+				<td width="90" align="center"><button onclick="location.href='CarReserveDel.jsp?id=<%=id%>&rDay=<%=cBean.getrDay()%>'">삭제</button></td>
 			</tr>
 			<%		
 				}
