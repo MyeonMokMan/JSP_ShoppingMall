@@ -47,7 +47,7 @@
 				<a href="RentcarMain.jsp?center=CarReserveMain.jsp" class="top-links">예약하기</a>
 			</td>
 			<td align="center" width="200" bgcolor="red">
-				<a href="#" class="top-links">예약확인</a>
+				<a href="RentcarMain.jsp?center=CarReserveView.jsp" class="top-links">예약확인</a>
 			</td>
 			<td align="center" width="200" bgcolor="red">
 				<a href="#" class="top-links">자유게시판</a>
